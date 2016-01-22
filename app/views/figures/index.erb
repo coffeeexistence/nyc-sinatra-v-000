@@ -1,0 +1,9 @@
+<% unless locals.empty? %>
+  <%= message %>
+<% end %>
+<h1>Historical Figures</h1>
+<ul>
+	<%@figures.each do |figure|%>
+		<li><a href="/figures/<%=figure.id%>"><%=figure.name%></a></li>
+	<%end%>
+</ul>

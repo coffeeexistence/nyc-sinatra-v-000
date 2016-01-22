@@ -1,5 +1,6 @@
-$:.unshift '.'
-require 'config/environment'
+#$:.unshift '.'
+require './config/environment'
+#binding.pry
 
 use Rack::Static, :urls => ['/css'], :root => 'public' # Rack fix allows seeing the css folder.
 
@@ -8,4 +9,5 @@ if defined?(ActiveRecord::Migrator) && ActiveRecord::Migrator.needs_migration?
 end
 
 use LandmarksController
+use FiguresController
 run ApplicationController

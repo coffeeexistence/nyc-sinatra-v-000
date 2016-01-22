@@ -1,0 +1,16 @@
+<% unless locals.empty? %>
+  <%= message %>
+<% end %>
+<h1><%=@figure.name%></h2>
+
+<h2>Titles</h2>
+<ul><%@figure.titles.each do |g|%>
+		<li><a href="/titles/<%=g.id%>"><%=g.name%></a></li>
+	<%end%>
+</ul>
+<h2>Landmarks</h2>
+<ul><%@figure.landmarks.each do |g|%>
+		<li><a href="/landmarks/<%=g.id%>"><%=g.name%></a></li>
+	<%end%>
+</ul>
+
